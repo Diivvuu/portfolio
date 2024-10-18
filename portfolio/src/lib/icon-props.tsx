@@ -1,4 +1,4 @@
-import { MailIcon } from "lucide-react";
+import { Link, MailIcon } from "lucide-react";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -37,6 +37,7 @@ export const Icons = {
       <line x1="10" y1="9" x2="8" y2="9" />
     </svg>
   ),
+  url: (props: IconProps) => <Link {...props} />,
   email: (props: IconProps) => <MailIcon {...props} />,
   instagram: (props: IconProps) => (
     <svg viewBox="0 0 448 512" {...props}>

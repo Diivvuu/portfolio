@@ -1,12 +1,9 @@
 import { Dock, DockIcon } from "@/components/ui/dock";
 import WordPullUp from "@/components/ui/word-pull-up";
 import { Icons } from "@/lib/icon-props";
-import { IN } from "country-flag-icons/react/3x2";
 import Image from "next/image";
 import myImage from "@/assets/PFP.jpg";
-import IconCloud from "@/components/ui/icon-cloud";
-import { TechStack } from "./tech-stack";
-import { FadeText } from "@/components/ui/fade-text";
+
 import BoxReveal from "@/components/ui/box-reveal";
 
 export const Hero = () => {
@@ -43,7 +40,7 @@ export const Hero = () => {
               <p className="text-lg">
                 I'm a 21 year old software developer from &nbsp; 🇮🇳, <br />I
                 love building full stack applications, lifting <br />
-                weights and I run on caffiene .
+                weights and I live for caffiene .
               </p>
             </BoxReveal>
           </div>
@@ -52,8 +49,8 @@ export const Hero = () => {
           <Image
             src={myImage}
             height={280}
-            width={250}
-            className="rounded-lg shadow-lg shadow-[#f2f2f269]"
+            width={280}
+            className="rounded-lg shadow-md shadow-[#f2f2f269]"
             alt="pfp"
           />
         </div>

@@ -17,7 +17,6 @@ export default function Home() {
         />
       </div>
 
-      {/* Main content over the grid */}
       <div className="relative z-10 min-h-screen rounded-lg w-full bg-background overflow-hidden border">
         <Header />
       </div>
