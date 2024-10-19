@@ -18,7 +18,7 @@ import { Check } from "lucide-react";
 import { useState } from "react";
 
 interface LeftSidebarProps {
-  scrollToSection: (ref: React.RefObject<HTMLElement>) => void;
+  scrollToSection: (ref: React.RefObject<HTMLElement>, offset?: number) => void; // Make offset optional
   heroRef: React.RefObject<HTMLElement>;
   workExpRef: React.RefObject<HTMLElement>;
   mainSectionRef: React.RefObject<HTMLElement>;
@@ -46,14 +46,17 @@ export const LeftSidebar = ({
 
   return (
     <div className="flex flex-col w-full h-full gap-y-8 pt-24 text-white justify-start items-end">
-      <button onClick={() => scrollToSection(heroRef)}>Hero Section</button>
-      <button onClick={() => scrollToSection(workExpRef)}>
-        Work Experience
+      <button onClick={() => scrollToSection(heroRef, 0.3)}>Hello</button>
+      <button onClick={() => scrollToSection(workExpRef, 0.3)}>
+        Experience
       </button>
-      <button onClick={() => scrollToSection(mainSectionRef)}>Projects</button>
-
-      <div>Experience</div>
+      <button onClick={() => scrollToSection(mainSectionRef, 0.1)}>
+        Projects
+      </button>
       <div>Tech</div>
+
+      <div>About</div>
+      <div>Contact</div>
       <Popover>
         <PopoverTrigger asChild>
           <button className="justify-between">
@@ -94,9 +97,6 @@ export const LeftSidebar = ({
           </Command>
         </PopoverContent>
       </Popover>
-      <div>About</div>
-      <div>Projects</div>
-      <div>Contact</div>
     </div>
   );
 };

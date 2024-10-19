@@ -1,4 +1,4 @@
-"use client";
+"use client"; // Home.tsx
 import { Hero } from "./components/hero";
 import { MainSection } from "./components/main-section";
 import { LeftSidebar } from "./components/left-sidebar";
@@ -11,12 +11,24 @@ const BoxReveal = dynamic(() => import("@/components/ui/box-reveal"), {
 });
 
 export default function Home() {
-  const heroRef = useRef(null);
-  const workExpRef = useRef(null);
-  const mainSectionRef = useRef(null);
+  const heroRef = useRef<HTMLElement>(null);
+  const workExpRef = useRef<HTMLElement>(null);
+  const mainSectionRef = useRef<HTMLElement>(null);
 
-  const scrollToSection = (ref: any) => {
-    ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  const scrollToSection = (
+    ref: React.RefObject<HTMLElement>,
+    offset: number = 0
+  ) => {
+    if (ref.current) {
+      const elementPosition =
+        ref.current.getBoundingClientRect().top + window.scrollY;
+      const offsetInPixels = offset * window.innerHeight; // Convert offset to pixels
+      const offsetPosition = elementPosition - offsetInPixels; // Adjust position by the offset
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -35,19 +47,17 @@ export default function Home() {
       <div className="w-6/12 mx-auto items-center justify-center overflow-hidden">
         <div className="relative my-4 rounded-xl mx-auto bg-black flex flex-col text-white min-h-screen">
           <BoxReveal boxColor={"#000"} width="100%" duration={1.2}>
-            <>
-              <div ref={heroRef} className="flex flex-col z-10">
-                <div className="z-10 mt-6 font-getistKanit">
-                  <Hero />
-                </div>
+            <div ref={heroRef} className="flex flex-col z-10">
+              <div className="z-10 mt-6 font-getistKanit">
+                <Hero />
               </div>
-              <div ref={workExpRef}>
-                <WorkExp />
-              </div>
-              <div ref={mainSectionRef} className="mt-20 z-30">
-                <MainSection />
-              </div>
-            </>
+            </div>
+            <div ref={workExpRef}>
+              <WorkExp />
+            </div>
+            <div ref={mainSectionRef} className="mt-20 z-30">
+              <MainSection />
+            </div>
           </BoxReveal>
         </div>
       </div>
