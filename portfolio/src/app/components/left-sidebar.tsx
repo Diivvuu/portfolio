@@ -49,15 +49,15 @@ export const LeftSidebar = ({
   }
 
   return (
-    <div className="flex flex-col w-full h-full gap-y-8 pt-24 text-white justify-start items-end">
+    <div className="flex flex-col w-full h-full gap-y-8 pt-24 text-white justify-start items-end font-geistKanit">
       <button onClick={() => scrollToSection(heroRef, 0.3)}>Hello</button>
       <button onClick={() => scrollToSection(workExpRef, 0.3)}>
         Experience
       </button>
+      <div>Tech</div>
       <button onClick={() => scrollToSection(mainSectionRef, 0.1)}>
         Projects
       </button>
-      <div>Tech</div>
 
       <div>About</div>
       <div>Contact</div>

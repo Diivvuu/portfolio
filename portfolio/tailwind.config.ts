@@ -24,6 +24,10 @@ const config: Config = {
         geistKanit: "var(--font-get-kanit)", // Corrected typo here
       },
       keyframes: {
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
         "accordion-down": {
           from: {
             height: "0",
@@ -50,6 +54,7 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "border-beam": "border-beam calc(var(--duration) * 1s) infinite linear",
+        "infinite-scroll": "infinite-scroll 15s linear infinite",
       },
     },
   },

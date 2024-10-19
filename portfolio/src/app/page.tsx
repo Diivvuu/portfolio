@@ -5,6 +5,7 @@ import { LeftSidebar } from "./components/left-sidebar";
 import { WorkExp } from "./components/work-exp";
 import dynamic from "next/dynamic";
 import { useRef } from "react";
+import { TechStack } from "./components/tech-stack";
 
 const BoxReveal = dynamic(() => import("@/components/ui/box-reveal"), {
   ssr: false,
@@ -57,6 +58,7 @@ export default function Home() {
               <div ref={workExpRef}>
                 <WorkExp />
               </div>
+              <div><TechStack/></div>
               <div ref={mainSectionRef} className="mt-20 z-30">
                 <MainSection />
               </div>
