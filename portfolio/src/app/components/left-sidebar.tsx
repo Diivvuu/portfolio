@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -19,8 +18,7 @@ import { Check } from "lucide-react";
 import { useState } from "react";
 
 export const LeftSidebar = () => {
-  const [openDialog, setOpenDialog] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [_open, setOpen] = useState(false);
   const [value, setValue] = useState("");
   const activities = useGithubActivity();
 
