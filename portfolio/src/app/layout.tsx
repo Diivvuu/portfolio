@@ -13,7 +13,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 const getistKanit = localFont({
-  src: "./fonts/spcl1.ttf",
+  src: "./fonts/Arima-VariableFont_wght.ttf",
   variable: "--font-get-kanit",
   weight: "100 900",
 });
