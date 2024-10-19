@@ -8,29 +8,34 @@ import { WorkExp } from "./components/work-exp";
 export default function Home() {
   return (
     <div className="flex min-h-screen">
-      <div className="w-6/12">
+      {/* Fixed left sidebar */}
+      <div className="w-3/12 fixed top-0 left-0 h-screen">
         <LeftSidebar />
       </div>
-      <div className="size-full items-center md:mx-20 justify-center overflow-hidden">
-        <div className="relative my-4 rounded-xl mx-auto bg-[#0a090a] flex flex-col text-white min-h-screen border-2 border-white">
-          <div className="min-h-screen border-2 border-white m-1 rounded-lg ">
-            <BoxReveal boxColor={"#000"} width="100%" duration={1.2}>
-              <div className="flex flex-col z-10">
-                <div className="z-10 mt-6 font-getistKanit">
-                  <Hero />
-                </div>
-                <div className="">
-                  <WorkExp />
-                </div>
-                <div className="mt-20 z-30">
-                  <MainSection />
-                </div>
+
+      {/* Main content area */}
+      <div className="w-6/12 mx-auto items-center justify-center overflow-hidden">
+        <div className="relative my-4 rounded-xl mx-auto bg-black flex flex-col text-white min-h-screen">
+          <BoxReveal boxColor={"#000"} width="100%" duration={1.2}>
+            <div className="flex flex-col z-10">
+              <div className="z-10 mt-6 font-getistKanit">
+                <Hero />
               </div>
-            </BoxReveal>
-          </div>
+              <div className="">
+                <WorkExp />
+              </div>
+              <div className="mt-20 z-30">
+                <MainSection />
+              </div>
+            </div>
+          </BoxReveal>
         </div>
       </div>
-      <div className="w-6/12">{/* <LeftSidebar /> */}</div>
+
+      {/* Fixed right sidebar */}
+      <div className="w-3/12 fixed top-0 right-0 h-screen">
+        {/* <LeftSidebar /> */}
+      </div>
     </div>
   );
 }

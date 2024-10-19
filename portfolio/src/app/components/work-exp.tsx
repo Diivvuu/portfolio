@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/site-logo.svg";
 import Image from "next/image";
+import { BorderBeam } from "@/components/ui/border-beam";
 export const WorkExp = () => {
   return (
-    <div className="w-10/12 mx-auto px-20 border-2 border-white rounded-lg mt-12  ont-getistKanit">
-      <ol className="w-full relative border-s border-gray-200 dark:border-gray-700">
+    <div className="relative w-10/12 mx-auto px-20 border-2 border-gray-950 rounded-lg mt-12 font-geistKanit">
+      <ol className="w-full relative border-s  dark:border-gray-700">
         <li className="my-3 ms-4">
           <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
           <time className="mb-1 text-sm font-normal leading-none text-gray-200 dark:text-gray-500">
@@ -55,6 +56,7 @@ export const WorkExp = () => {
           </Button>
         </li>
       </ol>
+      <BorderBeam size={1000} duration={12} delay={9} />
     </div>
   );
 };

@@ -33,8 +33,10 @@ export const LeftSidebar = () => {
   }
 
   return (
-    <div className="flex flex-col w-full h-full gap-y-8 text-white justify-center items-end">
-      <Popover>
+    <div className="flex flex-col w-full h-full gap-y-8 pt-24 text-white justify-start items-end">
+      <div>Experience</div>
+      <div>Tech</div>
+      {/* <Popover>
         <PopoverTrigger asChild>
           <button className="justify-between">
             <Icons.gitHub className="size-8" />
@@ -64,7 +66,7 @@ export const LeftSidebar = () => {
                         )}
                       />
                       {activity.payload?.commits?.[0]?.message || "No message"}{" "}
-                      {/* Display commit message */}
+                      
                     </CommandItem>
                   ))
                 ) : (
@@ -74,8 +76,9 @@ export const LeftSidebar = () => {
             </CommandList>
           </Command>
         </PopoverContent>
-      </Popover>
+      </Popover> */}
       <div>about</div>
+      <div>Projects</div>
       <div>Contact</div>
     </div>
   );

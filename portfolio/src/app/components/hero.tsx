@@ -8,12 +8,12 @@ import { BorderBeam } from "@/components/ui/border-beam";
 export const Hero = () => {
   return (
     // <div className="">
-    <div className="relative h-full overflow-hidden bg-background rounded-lg py-4 w-10/12 flex flex-col items-center justify-center mx-auto">
+    <div className="relative h-full overflow-hidden bg-background rounded-lg border-2 border-gray-950 py-4 w-10/12 flex flex-col items-center justify-center mx-auto">
       <div className="px-8 w-full flex justify-between items-center pt-8">
         <div className="flex flex-col items-start justify-start p-4 gap-y-8 w-6/12">
           <div className="flex items-center">
             <WordPullUp
-              className="font-black text-left text-nowrap font-getistKanit text-white dark:text-white text-xs md:text-5xl"
+              className="font-black text-left text-nowrap font-geistKanit text-white dark:text-white text-xs md:text-5xl"
               words="Hey, I  am  Divu"
             />
             {/* <div className="text-6xl">🇮🇳</div> */}
@@ -35,10 +35,10 @@ export const Hero = () => {
             </Dock>
           </div>
           <div className="w-full items-center justify-center overflow-hidden">
-            <p className="sm:text-xs md:text-lg font-getistKanit">
-              I&apos;m a 21 year old software developer from&nbsp; 🇮🇳&nbsp; and I
-              love building full stack applications, lifting weights and I live
-              for caffiene .
+            <p className="sm:text-xs md:text-lg font-geistKanit">
+              I&apos;m a 21 year old software developer from&nbsp; 🇮🇳&nbsp; and
+              I love building full stack applications, lifting weights and I
+              live for caffiene .
             </p>
           </div>
         </div>
@@ -52,7 +52,7 @@ export const Hero = () => {
           />
         </div>
       </div>
-      <BorderBeam size={850} duration={12} delay={9} />
+      <BorderBeam size={1000} duration={12} delay={9} />
     </div>
   );
 };

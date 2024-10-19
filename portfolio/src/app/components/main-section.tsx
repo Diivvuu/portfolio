@@ -18,7 +18,7 @@ export const MainSection = () => {
         </TabsList>
         <TabsContent
           value="projects"
-          className="w-full mt-3 max-h-[80vh] overflow-y-scroll"
+          className="w-full mt-3 overflow-y-scroll flex flex-col justify-center items-center"
         >
           <ProjectCard />
           <ProjectCard />
