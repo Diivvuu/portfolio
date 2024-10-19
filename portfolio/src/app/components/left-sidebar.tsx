@@ -25,6 +25,7 @@ interface LeftSidebarProps {
   heroRef: React.RefObject<HTMLDivElement>; // Change HTMLElement to HTMLDivElement
   workExpRef: React.RefObject<HTMLDivElement>; // Change HTMLElement to HTMLDivElement
   mainSectionRef: React.RefObject<HTMLDivElement>; // Change HTMLElement to HTMLDivElement
+  techStackRef: React.RefObject<HTMLDivElement>; // Change HTMLElement to HTMLDivElement
 }
 
 export const LeftSidebar = ({
@@ -32,6 +33,7 @@ export const LeftSidebar = ({
   heroRef,
   workExpRef,
   mainSectionRef,
+  techStackRef,
 }: LeftSidebarProps) => {
   /* eslint-disable-next-line no-unused-vars */
   const [_open, setOpen] = useState(false);
@@ -54,7 +56,7 @@ export const LeftSidebar = ({
       <button onClick={() => scrollToSection(workExpRef, 0.3)}>
         Experience
       </button>
-      <div>Tech</div>
+      <button onClick={() => scrollToSection(techStackRef, 0.2)}>Tech</button>
       <button onClick={() => scrollToSection(mainSectionRef, 0.1)}>
         Projects
       </button>

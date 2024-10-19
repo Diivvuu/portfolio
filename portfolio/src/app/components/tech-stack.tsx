@@ -6,8 +6,13 @@ import {
 } from "react-icon-cloud";
 import { useTheme } from "next-themes";
 
+// Define a type for the icon data
+interface IconData {
+  simpleIcons: Record<string, SimpleIcon>;
+}
+
 // Function to render custom icons
-const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
+const renderCustomIcon = (icon: SimpleIcon, theme: string | undefined) => {
   const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
   const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
   const minContrastRatio = theme === "dark" ? 2 : 1.2;
@@ -22,7 +27,7 @@ const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
       href: undefined,
       target: undefined,
       rel: undefined,
-      onClick: (e: any) => e.preventDefault(),
+      onClick: (e) => e.preventDefault(),
     },
   });
 };
@@ -55,33 +60,48 @@ export const TechStack = () => {
     []
   );
 
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<IconData | null>(null);
+  const [loading, setLoading] = useState(true);
   const theme = useTheme();
 
   useEffect(() => {
-    const slugs = iconSlugs.map((icon) => icon.slug); // Extract slugs for fetching
-    fetchSimpleIcons({ slugs }).then(setData);
-  }, [iconSlugs]); // No dependencies since iconSlugs is now stable
+    const slugs = iconSlugs.map((icon) => icon.slug);
+    fetchSimpleIcons({ slugs })
+      .then((fetchedData) => {
+        setData(fetchedData);
+      })
+      .catch((error) => {
+        console.error("Error fetching icons:", error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [iconSlugs]);
 
   const renderedIcons = useMemo(() => {
     if (!data) return null;
 
     return iconSlugs.map(({ slug, label }) => {
       const icon = renderCustomIcon(data.simpleIcons[slug], theme.theme);
-      return { icon, label }; // Return icon and corresponding label
+      return { icon, label };
     });
-  }, [data, theme]);
+  }, [data, iconSlugs, theme]);
+
+  if (loading) {
+    return <div>Loading icons...</div>; // Loading state
+  }
 
   return (
     <div className="relative flex gap-2 flex-wrap font-geistKanit w-10/12 mx-auto items-center justify-center overflow-hidden rounded-lg bg-background pb-20 pt-8">
-      {/* Render icons with labels */}
       <div className="flex w-full justify-start ">My Tech Toolbox</div>
       {renderedIcons?.map(({ icon, label }, index) => (
-        <div className="flex items-center justify-between border-2 border-white py-1 px-2 rounded-lg group hover:scale-110 transition-all ease duration-300">
-          <span
-            key={`icon-${index}`}
-            className="inline-flex size-4 flex-col items-center mx-2 group-hover:scale-75 transition-all ease duration-300"
-          >
+        <div
+          key={`icon-${index}`}
+          className="flex items-center justify-between border-2 border-white py-1 px-2 rounded-lg group hover:scale-110 transition-all ease duration-300"
+          role="button"
+          aria-label={label}
+        >
+          <span className="inline-flex size-4 flex-col items-center mx-2 group-hover:scale-75 transition-all ease duration-300">
             {icon}
           </span>
           <span className="text-sm group-hover:scale-110 transition-all ease duration-300">

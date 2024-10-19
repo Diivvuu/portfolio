@@ -15,7 +15,7 @@ export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null); // Change HTMLElement to HTMLDivElement
   const workExpRef = useRef<HTMLDivElement>(null); // Change HTMLElement to HTMLDivElement
   const mainSectionRef = useRef<HTMLDivElement>(null); // Change HTMLElement to HTMLDivElement
-
+  const techStackRef = useRef<HTMLDivElement>(null);
   const scrollToSection = (
     ref: React.RefObject<HTMLDivElement>,
     offset: number = 0
@@ -42,6 +42,7 @@ export default function Home() {
           heroRef={heroRef}
           workExpRef={workExpRef}
           mainSectionRef={mainSectionRef}
+          techStackRef={techStackRef}
         />
       </div>
 
@@ -58,7 +59,9 @@ export default function Home() {
               <div ref={workExpRef}>
                 <WorkExp />
               </div>
-              <div><TechStack/></div>
+              <div ref={techStackRef}>
+                <TechStack />
+              </div>
               <div ref={mainSectionRef} className="mt-20 z-30">
                 <MainSection />
               </div>
