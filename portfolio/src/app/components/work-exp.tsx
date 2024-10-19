@@ -19,7 +19,7 @@ export const WorkExp = () => {
               src={logo}
               height={20}
               alt="dt logo"
-              className=" rounded-full"
+              className="bg-gray-200 p-1 rounded-full my-2"
             />
           </div>
           <ul className="w-full list-disc mb-4 ml-8 text-base font-normal text-gray-400 dark:text-gray-400">
@@ -31,7 +31,10 @@ export const WorkExp = () => {
               to make API calls more than 30% faster
             </li>
           </ul>
-          <Button className="bg-white ml-4" variant="link">
+          <Button
+            className="bg-white ml-4 hover:scale-90 transition-all ease duration-300"
+            variant="link"
+          >
             View more
           </Button>
         </li>
@@ -51,7 +54,10 @@ export const WorkExp = () => {
               Firebase and designed the whole frontend too!
             </li>
           </ul>
-          <Button className="bg-white ml-4" variant="link">
+          <Button
+            className="bg-white ml-4 hover:scale-90 transition-all ease duration-300"
+            variant="link"
+          >
             View more
           </Button>
         </li>

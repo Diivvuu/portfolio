@@ -17,26 +17,44 @@ import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
 import { useState } from "react";
 
-export const LeftSidebar = () => {
+interface LeftSidebarProps {
+  scrollToSection: (ref: React.RefObject<HTMLElement>) => void;
+  heroRef: React.RefObject<HTMLElement>;
+  workExpRef: React.RefObject<HTMLElement>;
+  mainSectionRef: React.RefObject<HTMLElement>;
+}
+
+export const LeftSidebar = ({
+  scrollToSection,
+  heroRef,
+  workExpRef,
+  mainSectionRef,
+}: LeftSidebarProps) => {
   const [_open, setOpen] = useState(false);
   const [value, setValue] = useState("");
   const activities = useGithubActivity();
 
   // Ensure activities are defined before accessing
   if (activities.loading) {
-    return <div>Loading...</div>; // Show loading state if necessary
+    return <div>Loading...</div>;
   }
 
   if (activities.error) {
-    console.error(activities.error); // Log any error
-    return <div>Error loading activities</div>; // Show error message
+    console.error(activities.error);
+    return <div>Error loading activities</div>;
   }
 
   return (
     <div className="flex flex-col w-full h-full gap-y-8 pt-24 text-white justify-start items-end">
+      <button onClick={() => scrollToSection(heroRef)}>Hero Section</button>
+      <button onClick={() => scrollToSection(workExpRef)}>
+        Work Experience
+      </button>
+      <button onClick={() => scrollToSection(mainSectionRef)}>Projects</button>
+
       <div>Experience</div>
       <div>Tech</div>
-      {/* <Popover>
+      <Popover>
         <PopoverTrigger asChild>
           <button className="justify-between">
             <Icons.gitHub className="size-8" />
@@ -66,7 +84,6 @@ export const LeftSidebar = () => {
                         )}
                       />
                       {activity.payload?.commits?.[0]?.message || "No message"}{" "}
-                      
                     </CommandItem>
                   ))
                 ) : (
@@ -76,8 +93,8 @@ export const LeftSidebar = () => {
             </CommandList>
           </Command>
         </PopoverContent>
-      </Popover> */}
-      <div>about</div>
+      </Popover>
+      <div>About</div>
       <div>Projects</div>
       <div>Contact</div>
     </div>
