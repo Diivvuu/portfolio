@@ -11,14 +11,15 @@ const BoxReveal = dynamic(() => import("@/components/ui/box-reveal"), {
 });
 
 export default function Home() {
-  const heroRef = useRef<HTMLElement>(null);
-  const workExpRef = useRef<HTMLElement>(null);
-  const mainSectionRef = useRef<HTMLElement>(null);
+  const heroRef = useRef<HTMLDivElement>(null); // Change HTMLElement to HTMLDivElement
+  const workExpRef = useRef<HTMLDivElement>(null); // Change HTMLElement to HTMLDivElement
+  const mainSectionRef = useRef<HTMLDivElement>(null); // Change HTMLElement to HTMLDivElement
 
   const scrollToSection = (
-    ref: React.RefObject<HTMLElement>,
+    ref: React.RefObject<HTMLDivElement>,
     offset: number = 0
   ) => {
+    // Change HTMLElement to HTMLDivElement
     if (ref.current) {
       const elementPosition =
         ref.current.getBoundingClientRect().top + window.scrollY;
@@ -47,17 +48,19 @@ export default function Home() {
       <div className="w-6/12 mx-auto items-center justify-center overflow-hidden">
         <div className="relative my-4 rounded-xl mx-auto bg-black flex flex-col text-white min-h-screen">
           <BoxReveal boxColor={"#000"} width="100%" duration={1.2}>
-            <div ref={heroRef} className="flex flex-col z-10">
-              <div className="z-10 mt-6 font-getistKanit">
-                <Hero />
+            <>
+              <div ref={heroRef} className="flex flex-col z-10">
+                <div className="z-10 mt-6 font-getistKanit">
+                  <Hero />
+                </div>
               </div>
-            </div>
-            <div ref={workExpRef}>
-              <WorkExp />
-            </div>
-            <div ref={mainSectionRef} className="mt-20 z-30">
-              <MainSection />
-            </div>
+              <div ref={workExpRef}>
+                <WorkExp />
+              </div>
+              <div ref={mainSectionRef} className="mt-20 z-30">
+                <MainSection />
+              </div>
+            </>
           </BoxReveal>
         </div>
       </div>

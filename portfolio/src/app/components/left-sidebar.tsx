@@ -18,10 +18,13 @@ import { Check } from "lucide-react";
 import { useState } from "react";
 
 interface LeftSidebarProps {
-  scrollToSection: (ref: React.RefObject<HTMLElement>, offset?: number) => void; // Make offset optional
-  heroRef: React.RefObject<HTMLElement>;
-  workExpRef: React.RefObject<HTMLElement>;
-  mainSectionRef: React.RefObject<HTMLElement>;
+  scrollToSection: (
+    ref: React.RefObject<HTMLDivElement>, // Change HTMLElement to HTMLDivElement
+    offset?: number
+  ) => void;
+  heroRef: React.RefObject<HTMLDivElement>; // Change HTMLElement to HTMLDivElement
+  workExpRef: React.RefObject<HTMLDivElement>; // Change HTMLElement to HTMLDivElement
+  mainSectionRef: React.RefObject<HTMLDivElement>; // Change HTMLElement to HTMLDivElement
 }
 
 export const LeftSidebar = ({
@@ -30,6 +33,7 @@ export const LeftSidebar = ({
   workExpRef,
   mainSectionRef,
 }: LeftSidebarProps) => {
+  /* eslint-disable-next-line no-unused-vars */
   const [_open, setOpen] = useState(false);
   const [value, setValue] = useState("");
   const activities = useGithubActivity();
