@@ -5,16 +5,17 @@ import Image from "next/image";
 import myImage from "@/assets/PFP.jpg";
 
 import BoxReveal from "@/components/ui/box-reveal";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 export const Hero = () => {
   return (
     // <div className="">
-    <div className="p-4 max-w-4xl w-full flex flex-col items-center justify-center mx-auto ">
+    <div className="relative h-full overflow-hidden bg-background rounded-lg p-4 w-10/12 flex flex-col items-center justify-center mx-auto">
       <div className="px-8 w-full flex justify-between items-end pt-8">
-        <div className="flex flex-col items-start justify-end gap-y-8 w-8/12">
+        <div className="flex flex-col items-start justify-center p-4 gap-y-8 w-6/12">
           <div className="flex items-center">
             <WordPullUp
-              className="text-4xl font-black font-getistKanit text-white dark:text-white md:text-4xl"
+              className="font-black font-getistKanit text-white dark:text-white md:text-4xl"
               words="Hi, I  am  Divu"
             />
             {/* <div className="text-6xl">🇮🇳</div> */}
@@ -35,26 +36,26 @@ export const Hero = () => {
               </DockIcon>
             </Dock>
           </div>
-          <div className="w-full items-center justify-center overflow-hidden font-getistKanit">
-            <BoxReveal boxColor={"#333"} duration={1}>
-              <p className="text-lg">
-                I'm a 21 year old software developer from &nbsp; 🇮🇳, <br />I
-                love building full stack applications, lifting <br />
-                weights and I live for caffiene .
-              </p>
-            </BoxReveal>
+          <div className="w-11/12 items-center justify-center overflow-hidden">
+            <p className="text-lg font-getistKanit">
+              I'm a 21 year old software developer from&nbsp; 🇮🇳&nbsp; and I
+              love building full stack applications, lifting weights and I live
+              for caffiene .
+            </p>
           </div>
         </div>
-        <div>
+        <div className="relative flex h-full w-fit-content p-2 flex-col items-center justify-center overflow-hidden bg-background rounded-lg">
           <Image
             src={myImage}
             height={280}
             width={280}
-            className="rounded-lg shadow-md shadow-[#f2f2f269]"
+            className="rounded-lg shadow-xl shadow-[#f2f2f269]"
             alt="pfp"
           />
+          {/* <BorderBeam size={250} duration={12} delay={9} /> */}
         </div>
       </div>
+      <BorderBeam size={850} duration={12} delay={9} />
     </div>
   );
 };

@@ -17,6 +17,7 @@ import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
+import ShinyButton from "@/components/ui/shiny-button";
 
 export const ProjectCard = () => {
   const plugin = React.useRef(
@@ -29,7 +30,7 @@ export const ProjectCard = () => {
       color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
     >
       <div className="w-full flex flex-col justify-center items-center">
-        <div className="w-full flex gap-12 justify-between items-center text-white">
+        <div className="w-full flex gap-12 justify-between px-2 items-center text-white">
           <div>
             <div
               className={cn(
@@ -56,18 +57,18 @@ export const ProjectCard = () => {
         <div className="w-full h-full flex justify-center items-center mt-3">
           <Carousel
             plugins={[plugin.current]}
-            className="w-10/12 md:max-h-56 lg:max-h-[16.5rem]"
+            className="w-full max-h-fit"
             onMouseEnter={plugin.current.stop}
             onMouseLeave={plugin.current.reset}
           >
             <CarouselContent>
-              {Array.from({ length: 15 }).map((_, index) => (
+              {Array.from({ length: 3 }).map((_, index) => (
                 <CarouselItem key={index}>
                   <div className="p-1">
-                    <AspectRatio ratio={4 / 4}>
-                      <div className="relative  flex h-fullw-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+                    <AspectRatio ratio={6 / 4}>
+                      <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
                         <Image
-                          className="rounded-lg  opacity-40 hover:opacity-75 transition-all ease-in duration-300"
+                          className="rounded-lg opacity-80 hover:opacity-100 transition-all ease-in duration-300"
                           alt="project"
                           src={projectImg}
                         />
@@ -88,15 +89,18 @@ export const ProjectCard = () => {
             />
           </Carousel>
         </div>
-        <div className="">
-          <div className="">
-            <Button className="ml-6">Typescript</Button>
-            <Button className="ml-6">Typescript</Button>
-            <Button className="ml-6">Typescript</Button>
-            <Button className="ml-6">Typescript</Button>
-            <Button className="ml-6">Typescript</Button>
-            <Button className="ml-6">Typescript</Button>
-          </div>
+        <div className="w-11/12 flex items-center justify-center gap-x-3 flex-wrap gap-y-2 mt-4">
+          <ShinyButton className="bg-stone-300 px-2 py-1">React.js</ShinyButton>
+          <ShinyButton className="bg-stone-300 px-2 py-1">Node.js</ShinyButton>
+          <ShinyButton className="bg-stone-300 px-2 py-1">redux</ShinyButton>
+          <ShinyButton className="bg-stone-300 px-2 py-1">stripe</ShinyButton>
+          <ShinyButton className="bg-stone-300 px-2 py-1">MongoDB</ShinyButton>
+          <ShinyButton className="bg-stone-300 px-2 py-1">Express</ShinyButton>
+          <ShinyButton className="bg-stone-300 px-2 py-1">RestAPI</ShinyButton>
+          <ShinyButton className="bg-stone-300 px-2 py-1">Parallax</ShinyButton>
+          <ShinyButton className="bg-stone-300 px-2 py-1">
+            Bootstrap
+          </ShinyButton>
         </div>
       </div>
       {/* <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">

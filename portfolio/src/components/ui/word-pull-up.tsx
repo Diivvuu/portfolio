@@ -19,7 +19,7 @@ export default function WordPullUp({
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.09,
+        staggerChildren: 0.1,
       },
     },
   },

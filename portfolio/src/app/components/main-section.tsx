@@ -3,10 +3,10 @@ import { ProjectCard } from "./card";
 
 export const MainSection = () => {
   return (
-    <div className="flex items-center justify-center w-full">
+    <div className="flex items-center justify-center w-5/12 mx-auto z-40">
       <Tabs
         defaultValue="projects"
-        className="w-9/12 flex flex-col items-center justify-center px-4 py-2 bg-[#000000ad] rounded-xl"
+        className="w-full flex flex-col items-center justify-center mx-3  border-white border-2 shadow-md shadow-white py-2 bg-[#000000ad] rounded-xl"
       >
         <TabsList className="w-full bg-black ">
           <TabsTrigger className="w-full" value="projects">
@@ -16,7 +16,11 @@ export const MainSection = () => {
             Education
           </TabsTrigger>
         </TabsList>
-        <TabsContent value="projects" className="w-10/12 mt-3">
+        <TabsContent
+          value="projects"
+          className="w-full mt-3 max-h-[50vh] overflow-y-scroll"
+        >
+          <ProjectCard />
           <ProjectCard />
         </TabsContent>
         <TabsContent value="education">Change your password here.</TabsContent>
