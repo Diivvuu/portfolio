@@ -25,16 +25,39 @@ export const Hero = () => {
           <div className="relative">
             <Dock direction="middle" className="mt-0">
               <DockIcon>
-                <Icons.gitHub className="size-4 lg:size-6" />
+                <a
+                  href="https://github.com/Diivvuu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icons.gitHub className="size-4 lg:size-6" />
+                </a>
               </DockIcon>
               <DockIcon>
-                <Icons.linkedIn className="size-4 lg:size-6" />
+                <a
+                  href="https://www.linkedin.com/in/divyanshu-867452218/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icons.linkedIn className="size-4 lg:size-6" />
+                </a>
               </DockIcon>
               <DockIcon>
-                <Icons.email className="size-4 lg:size-6" />
+                <a
+                  href="mailto:divyanshubawa9@gmail.com"
+                  className="flex items-center"
+                >
+                  <Icons.email className="size-4 lg:size-6" />
+                </a>
               </DockIcon>
               <DockIcon>
-                <Icons.resume className="size-4 lg:size-6" />
+                <a
+                  href="https://drive.google.com/file/d/1Y3Lm0JaYuFNWfNWtt0AwGVsEdWDvkBOc/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icons.resume className="size-4 lg:size-6" />
+                </a>
               </DockIcon>
             </Dock>
           </div>

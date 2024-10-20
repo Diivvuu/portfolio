@@ -34,10 +34,22 @@ export const ProjectCard = ({ Project }: ProjectCardProps) => {
           </div>
           <div className="flex justify-center items-center gap-x-3">
             <div>
-              <Icons.gitHub className="size-4 text-white" />
+              <a
+                href={Project.repo_link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icons.gitHub className="size-4 text-white" />
+              </a>
             </div>
             <div>
-              <Icons.url className="size-4 text-white" />{" "}
+              <a
+                href={Project.project_link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icons.url className="size-4 text-white" />{" "}
+              </a>
             </div>
           </div>
         </div>

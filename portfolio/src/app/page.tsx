@@ -23,7 +23,7 @@ export default function Home() {
   const aboutSectionRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = (
-    ref: React.RefObject<HTMLDivElement>,
+    ref: React.RefObject<HTMLDivElement >,
     offset: number = 0
   ) => {
     if (ref.current) {
