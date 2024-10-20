@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import { useRef } from "react";
 import { TechStack } from "./components/tech-stack";
 import { About } from "./components/about";
+import { Contact } from "./components/contact";
 
 const BoxReveal = dynamic(() => import("@/components/ui/box-reveal"), {
   ssr: false,
@@ -69,7 +70,7 @@ export default function Home() {
                 <MainSection />
               </div>
               <div ref={aboutSectionRef}>
-                <About />
+                <Contact />
               </div>
             </>
           </BoxReveal>

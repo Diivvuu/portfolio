@@ -5,7 +5,6 @@ import {
   SimpleIcon,
 } from "react-icon-cloud";
 import { useTheme } from "next-themes";
-import { CoolMode } from "@/components/ui/cool-mode";
 import { Button } from "@/components/ui/button";
 
 interface IconData {
@@ -104,16 +103,16 @@ export const TechStack = () => {
           role="button"
           aria-label={label}
         >
-          <CoolMode>
-            <Button className="relative flex items-center justify-center bg-transparent p-0 m-0 hover:bg-transparent">
-              <span className="inline-flex size-4 flex-col items-center mx-2 group-hover:scale-75 transition-all ease duration-300">
-                {icon}
-              </span>
-              <span className="text-sm group-hover:scale-110 transition-all ease duration-300">
-                {label}
-              </span>
-            </Button>
-          </CoolMode>
+          {/* <CoolMode> */}
+          <Button className="relative flex items-center justify-center bg-transparent p-0 m-0 hover:bg-transparent cursor-default">
+            <span className="inline-flex size-4 flex-col items-center mx-2 group-hover:scale-75 transition-all ease duration-300">
+              {icon}
+            </span>
+            <span className="text-sm group-hover:scale-110 transition-all ease duration-300">
+              {label}
+            </span>
+          </Button>
+          {/* </CoolMode> */}
         </div>
       ))}
       {/* <BorderBeam size={1000} duration={12} delay={9} /> */}

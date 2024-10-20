@@ -64,9 +64,8 @@ export const LeftSidebar = ({
       </button>
 
       <button onClick={() => scrollToSection(aboutSectionRef, 0.2)}>
-        About
+        Contact
       </button>
-      <div>Contact</div>
       <Popover>
         <PopoverTrigger asChild>
           <button className="justify-between">
