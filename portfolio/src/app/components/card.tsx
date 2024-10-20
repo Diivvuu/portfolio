@@ -24,7 +24,7 @@ export const ProjectCard = () => {
   return (
     <div className="relative m-4 py-4 flex h-full w-11/12 flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
       <div className="w-full flex flex-col justify-center items-center">
-        <div className="w-full flex gap-12 justify-between px-16 items-center text-white">
+        <div className="w-full flex gap-12 justify-between px-2 items-center text-white">
           <div className="text-white text-lg font-geistKanit font-semibold">
             {/* <AnimatedShinyText className="inline-flex items-center justify-center px-3 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400"> */}
             {/* <ShimmerButton className="relative py-1 px-3 text-[#000000c8] bg-white font-getistKanit font-semibold text-sm"> */}
@@ -52,31 +52,31 @@ export const ProjectCard = () => {
               {images.map((image, index) => (
                 <CarouselItem key={index} className="">
                   <Card className="bg-transparent border-none">
-                    <CardContent className="p-0 w-10/12 mx-auto">
+                    <CardContent className="p-1 w-full mx-auto">
                       <Image
-                        className="relative w-10/12 h-full mx-auto bg-[#253fe7e8] rounded-lg opacity-80 hover:opacity-100 transition-all ease-in duration-300"
+                        className="relative w-full h-full mx-auto bg-[#253fe7e8] rounded-lg opacity-80 hover:opacity-100 transition-all ease-in duration-300"
                         alt="project"
                         // height={250}
                         // width={200}
                         layout="responsive"
-                        // objectFit="cover"
+                        objectFit="cover"
                         src={image}
                       />
-                      <BorderBeam
+                      {/* <BorderBeam
                         colorFrom="#fa7364"
                         colorTo="#5573fa"
                         size={1000}
                         duration={12}
                         delay={9}
-                      />
+                      /> */}
                     </CardContent>
                   </Card>
                 </CarouselItem>
               ))}
             </CarouselContent>
 
-            <CarouselPrevious className="text-black" />
-            <CarouselNext className="text-black" />
+            <CarouselPrevious className="text-black bg-transparent hover:bg-transparent border-none" />
+            <CarouselNext className="text-black bg-transparent hover:bg-transparent border-none" />
           </Carousel>
         </div>
 

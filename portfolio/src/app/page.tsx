@@ -62,7 +62,7 @@ export default function Home() {
               <div ref={techStackRef}>
                 <TechStack />
               </div>
-              <div ref={mainSectionRef} className="mt-20 z-30">
+              <div ref={mainSectionRef}>
                 <MainSection />
               </div>
             </>

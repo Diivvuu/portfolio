@@ -5,6 +5,9 @@ import {
   SimpleIcon,
 } from "react-icon-cloud";
 import { useTheme } from "next-themes";
+import { CoolMode } from "@/components/ui/cool-mode";
+import { Button } from "@/components/ui/button";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 // Define a type for the icon data
 interface IconData {
@@ -35,7 +38,6 @@ const renderCustomIcon = (icon: SimpleIcon, theme: string | undefined) => {
 export const TechStack = () => {
   const iconSlugs = useMemo(
     () => [
-      { slug: "redis", label: "Redis" },
       { slug: "nextdotjs", label: "Next.js" },
       { slug: "react", label: "React" },
       { slug: "nodedotjs", label: "Node.js" },
@@ -44,6 +46,7 @@ export const TechStack = () => {
       { slug: "tailwindcss", label: "Tailwind CSS" },
       { slug: "shadcnui", label: "Shadcn UI" },
       { slug: "mongodb", label: "MongoDB" },
+      { slug: "redis", label: "Redis" },
       { slug: "appwrite", label: "Appwrite" },
       { slug: "express", label: "Express" },
       { slug: "bootstrap", label: "Bootstrap" },
@@ -92,23 +95,28 @@ export const TechStack = () => {
   }
 
   return (
-    <div className="relative flex gap-2 flex-wrap font-geistKanit w-10/12 mx-auto items-center justify-center overflow-hidden rounded-lg bg-background pb-20 pt-8">
-      <div className="flex w-full justify-start ">My Tech Toolbox</div>
+    <div className="relative flex gap-2 flex-wrap font-geistKanit w-10/12 px-8 mx-auto items-center justify-center overflow-hidden rounded-lg bg-background py-8 mt-12">
+      <div className="flex w-full justify-center ">My Tech Toolbox</div>
       {renderedIcons?.map(({ icon, label }, index) => (
         <div
           key={`icon-${index}`}
-          className="flex items-center justify-between border-2 border-white py-1 px-2 rounded-lg group hover:scale-110 transition-all ease duration-300"
+          className="border-2 border-white px-2 rounded-xl group hover:scale-110 transition-all ease duration-300"
           role="button"
           aria-label={label}
         >
-          <span className="inline-flex size-4 flex-col items-center mx-2 group-hover:scale-75 transition-all ease duration-300">
-            {icon}
-          </span>
-          <span className="text-sm group-hover:scale-110 transition-all ease duration-300">
-            {label}
-          </span>
+          <CoolMode>
+            <Button className="relative flex items-center justify-center bg-transparent p-0 m-0 hover:bg-transparent">
+              <span className="inline-flex size-4 flex-col items-center mx-2 group-hover:scale-75 transition-all ease duration-300">
+                {icon}
+              </span>
+              <span className="text-sm group-hover:scale-110 transition-all ease duration-300">
+                {label}
+              </span>
+            </Button>
+          </CoolMode>
         </div>
       ))}
+      <BorderBeam size={1000} duration={12} delay={9} />
     </div>
   );
 };

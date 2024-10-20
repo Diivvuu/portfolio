@@ -56,7 +56,7 @@ export const LeftSidebar = ({
       <button onClick={() => scrollToSection(workExpRef, 0.3)}>
         Experience
       </button>
-      <button onClick={() => scrollToSection(techStackRef, 0.2)}>Tech</button>
+      <button onClick={() => scrollToSection(techStackRef, 0.3)}>Tech</button>
       <button onClick={() => scrollToSection(mainSectionRef, 0.1)}>
         Projects
       </button>
