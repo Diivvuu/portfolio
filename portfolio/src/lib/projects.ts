@@ -28,6 +28,7 @@ export const projects = {
     techStack: [
       "React.js",
       "Node.js",
+      "javascript",
       "Redux",
       "Stripe",
       "MongoDB",
@@ -40,7 +41,15 @@ export const projects = {
     repo_link: "https://github.com/Diivvuu/slack-clone-nextjs",
     project_link: "https://slack-clone-nextjs.vercel.app/",
     images: [slack1, slack2, slack3, slack4, slack5],
-    techStack: ["Next.js", "convex", "nuqs", "tailwindcss", "shadcn", "Quill"],
+    techStack: [
+      "Next.js",
+      "convex",
+      "typescript",
+      "nuqs",
+      "tailwindcss",
+      "shadcn",
+      "Quill",
+    ],
   },
   project3: {
     name: "Swiggy Clone",

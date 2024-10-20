@@ -26,7 +26,7 @@ export const ProjectCard = ({ Project }: ProjectCardProps) => {
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
   // const images = [projectImg, projectImg1, projectImg2, projectImg3];
   return (
-    <div className="relative m-2 py-4 flex h-full max-h-full w-11/12 hover:scale-105 transition-all ease  duration-300 flex-col items-center justify-start overflow-hidden rounded-lg border bg-background md:shadow-xl">
+    <div className="relative m-2 py-4 flex h-full max-h-full w-11/12 hover:scale-105 transition-all ease  duration-300 flex-col items-center justify-start overflow-hidden rounded-lg border-2 border-gray-600 bg-background md:shadow-xl">
       <div className="w-full flex flex-col justify-center items-center">
         <div className="w-full flex gap-12 justify-between px-2 items-center text-white">
           <div className="text-white text-sm font-geistKanit font-semibold">

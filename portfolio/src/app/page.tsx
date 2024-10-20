@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import { useRef } from "react";
 import { TechStack } from "./components/tech-stack";
 import { Contact } from "./components/contact";
+import { RightSidebar } from "./components/right-sidebar";
 
 const BoxReveal = dynamic(() => import("@/components/ui/box-reveal"), {
   ssr: false,
@@ -77,7 +78,9 @@ export default function Home() {
       </div>
 
       {/* Fixed right sidebar */}
-      <div className="w-3/12 fixed top-0 right-0 h-screen"></div>
+      <div className="w-3/12 fixed top-0 right-0 h-screen">
+        <RightSidebar />
+      </div>
     </div>
   );
 }

@@ -51,7 +51,7 @@ export const Contact = () => {
         <Button
           variant="outline"
           type="submit"
-          className="text-black py-2 rounded-md hover:bg-blue-600 transition duration-200"
+          className="text-black py-2 rounded-md hover:bg-black hover:text-white transition duration-200"
         >
           Send
         </Button>

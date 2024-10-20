@@ -23,7 +23,7 @@ export const MainSection = () => {
           className="w-full mt-3 px-4 overflow-y-scroll grid grid-cols-2 gap-y-4 justify-items-center"
         >
           {Object.values(projects).map((project, index) => (
-            <div key={index} className="flex justify-center">
+            <div key={index} className="flex justify-center mt-2">
               <ProjectCard Project={project} />
             </div>
           ))}

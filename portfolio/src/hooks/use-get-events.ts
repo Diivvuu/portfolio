@@ -5,6 +5,11 @@ import { Octokit } from "@octokit/rest";
 interface GithubEvent {
   id: string;
   type: string;
+  repo?: {
+    id?: string;
+    name?: string;
+    url?: string;
+  };
   payload?: {
     commits?: Array<{ message: string }>;
     // Add other properties based on your usage
