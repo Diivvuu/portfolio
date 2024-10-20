@@ -6,7 +6,6 @@ import { WorkExp } from "./components/work-exp";
 import dynamic from "next/dynamic";
 import { useRef } from "react";
 import { TechStack } from "./components/tech-stack";
-import { About } from "./components/about";
 import { Contact } from "./components/contact";
 
 const BoxReveal = dynamic(() => import("@/components/ui/box-reveal"), {
