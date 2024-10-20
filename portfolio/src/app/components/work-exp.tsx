@@ -26,11 +26,16 @@ export const WorkExp = () => {
           </div>
           <ul className="w-full list-disc mb-4 ml-8 text-base font-normal text-gray-400 dark:text-gray-400">
             <li>
-              Developed a whole frontend of Marketpalce platform for a client
+              Created and optimized the user portal landing page and admin
+              portal of a marketplace using React.js,
             </li>
             <li>
-              Integrated APIs using Redux saga in artist and supervisor portal
-              to make API calls more than 30% faster
+              Collaborated with the client's backend team to integrate APIs into
+              both user and admin portals, enhancing functionality and data flow.
+            </li>
+            <li>
+              Utilized Redux for state management, reducing API call latency by
+              30% and streamlining state updates.
             </li>
           </ul>
           <Button
