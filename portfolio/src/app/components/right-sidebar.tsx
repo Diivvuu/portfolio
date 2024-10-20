@@ -32,11 +32,11 @@ const Notification = ({ name, description, link, color, time }: Item) => {
   return (
     <figure
       className={cn(
-        "relative mx-auto w-full cursor-pointer overflow-hidden rounded-2xl px-3 py-1",
+        "relative mx-auto w-full cursor-pointer overflow-hidden rounded px-3 py-1",
         // animation styles
         "transition-all duration-200 ease-in-out hover:scale-[103%]",
         // light styles
-        "bg-black text-white border-2 border-slate-400 rounded-3xl  [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+        "bg-black text-white border-2 border-slate-400 rounded-lg  [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
         // dark styles
         "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
       )}
@@ -80,10 +80,10 @@ export const RightSidebar = () => {
   }
 
   return (
-    <div className="w-9/12 mt-20 border-2 font-geistKanit border-gray-800 rounded-xl px-4 py-1">
+    <div className="w-9/12 mt-20 border-2 font-geistKanit border-gray-800 rounded-xl px-2 py-2">
       <div className="py-2 text-white text-sm flex items-center gap-x-2 justify-start">
         <Icons.gitHub className="size-6 text-white" />
-        Recent Activity
+        Recent Commits
       </div>
       <AnimatedList className="pt-2">
         {activities.activity.length > 0 ? (

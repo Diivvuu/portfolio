@@ -1,3 +1,4 @@
+import HyperText from "@/components/ui/hyper-text";
 import { useState } from "react";
 
 interface LeftSidebarProps {
@@ -24,19 +25,21 @@ export const LeftSidebar = ({
 
   return (
     <div className="flex flex-col w-full h-full gap-y-8 pt-24 text-white justify-start items-end font-geistKanit">
-      <button onClick={() => scrollToSection(heroRef, 0.3)}>Hello</button>
-      <button onClick={() => scrollToSection(workExpRef, 0.2)}>
-        Experience
+      <button onClick={() => scrollToSection(heroRef, 0.3)}>
+        <HyperText text="Hello"></HyperText>
       </button>
-      <button onClick={() => scrollToSection(techStackRef, 0.2)}>Tech</button>
+      <button onClick={() => scrollToSection(workExpRef, 0.1)}>
+        <HyperText text="Experience"></HyperText>
+      </button>
+      <button onClick={() => scrollToSection(techStackRef, 0.2)}>
+        <HyperText text="Tech"></HyperText>
+      </button>
       <button onClick={() => scrollToSection(mainSectionRef, 0.1)}>
-        Projects
+        <HyperText text="Projects"></HyperText>
       </button>
-
       <button onClick={() => scrollToSection(aboutSectionRef, 0.2)}>
-        Contact
+        <HyperText text="Contact"></HyperText>
       </button>
-      
     </div>
   );
 };

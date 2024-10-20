@@ -8,32 +8,38 @@ export const Hero = () => {
   return (
     <div className="relative h-full overflow-hidden bg-background rounded-lg border-2 border-gray-800 py-4 w-10/12 flex flex-col items-center justify-center mx-auto">
       <div className="px-8 w-full flex justify-between items-center pt-8">
-        <div className="flex flex-col items-start justify-start p-4 gap-y-8 w-6/12">
-          <div className="flex items-center">
+        <div className="flex flex-col items-start justify-center md:justify-start p-4 gap-y-8 w-full lg:w-7/12">
+          <div className="flex items-center justify-center md:justify-start w-full ">
             <WordPullUp
-              className="font-black text-left text-nowrap font-geistKanit text-white dark:text-white text-xs md:text-5xl"
+              className="font-black text-center md:text-left text-nowrap font-geistKanit text-white dark:text-white text-base md:text-2xl lg:text-5xl"
               words="Hey, I  am  Divu"
             />
-            {/* <div className="text-6xl">🇮🇳</div> */}
           </div>
+          <Image
+            src={myImage}
+            height={180}
+            width={180}
+            className="rounded-lg md:hidden"
+            alt="pfp"
+          />
           <div className="relative">
             <Dock direction="middle" className="mt-0">
               <DockIcon>
-                <Icons.gitHub className="size-6" />
+                <Icons.gitHub className="size-4 lg:size-6" />
               </DockIcon>
               <DockIcon>
-                <Icons.linkedIn className="size-6" />
+                <Icons.linkedIn className="size-4 lg:size-6" />
               </DockIcon>
               <DockIcon>
-                <Icons.email className="size-6" />
+                <Icons.email className="size-4 lg:size-6" />
               </DockIcon>
               <DockIcon>
-                <Icons.resume className="size-6" />
+                <Icons.resume className="size-4 lg:size-6" />
               </DockIcon>
             </Dock>
           </div>
           <div className="w-full items-center justify-center overflow-hidden">
-            <p className="sm:text-xs md:text-lg font-geistKanit">
+            <p className="lg:text-lg text-center md:text-left md:text-xs font-geistKanit">
               I&apos;m a 21 year old software developer from&nbsp; 🇮🇳&nbsp; and
               I love building full stack applications, lifting weights and I
               live for caffiene .
@@ -45,7 +51,8 @@ export const Hero = () => {
             src={myImage}
             height={180}
             width={180}
-            className="rounded-lg"
+            layout="responsive"
+            className="hidden md:flex rounded-lg"
             alt="pfp"
           />
         </div>
