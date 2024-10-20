@@ -1,5 +1,5 @@
 import HyperText from "@/components/ui/hyper-text";
-import { useState } from "react";
+
 
 interface LeftSidebarProps {
   scrollToSection: (

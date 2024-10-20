@@ -10,20 +10,20 @@ export const MainSection = () => {
         defaultValue="projects"
         className="w-full flex flex-col items-center justify-center border-gray-800 border-2 py-2 bg-[#000000ad] rounded-xl"
       >
-        <TabsList className="w-11/12 flex justify-between gap-x-3 bg-black ">
-          <TabsTrigger className="w-full" value="projects">
+        <TabsList className="w-full flex-row md:justify-between gap-x-3 bg-black">
+          <TabsTrigger className="flex-1" value="projects">
             Projects
           </TabsTrigger>
-          <TabsTrigger className="w-full" value="education">
+          <TabsTrigger className="flex-1" value="education">
             Education
           </TabsTrigger>
         </TabsList>
         <TabsContent
           value="projects"
-          className="w-full mt-3 px-4 overflow-y-scroll grid grid-cols-2 gap-y-4 justify-items-center"
+          className="w-full mt-3 px-4 grid grid-cols-1 sm:grid-cols-2  gap-y-4 justify-items-center"
         >
           {Object.values(projects).map((project, index) => (
-            <div key={index} className="flex justify-center mt-2">
+            <div key={index} className="flex justify-center w-full mt-2">
               <ProjectCard Project={project} />
             </div>
           ))}

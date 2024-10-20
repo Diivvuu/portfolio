@@ -6,22 +6,25 @@ import myImage from "@/assets/PFP.jpg";
 
 export const Hero = () => {
   return (
-    <div className="relative h-full overflow-hidden bg-background rounded-lg border-2 border-gray-800 py-4 w-10/12 flex flex-col items-center justify-center mx-auto">
-      <div className="px-8 w-full flex justify-between items-center pt-8">
-        <div className="flex flex-col items-start justify-center md:justify-start p-4 gap-y-8 w-full lg:w-7/12">
-          <div className="flex items-center justify-center md:justify-start w-full ">
+    <div className="relative h-full overflow-hidden bg-background rounded-lg border-2 border-gray-800 py-4 w-10/12 max-w-7xl mx-auto flex flex-col items-center justify-center">
+      <div className="px-4 sm:px-8 w-full flex flex-col-reverse lg:flex-row justify-between items-center md:pt-8">
+        {/* Left Section (Text and Icons) */}
+        <div className="flex flex-col font-geistKanit items-center lg:items-start justify-center p-4 gap-y-8 w-full lg:w-7/12">
+          <div className="flex items-center justify-center lg:justify-start w-full">
             <WordPullUp
-              className="font-black text-center md:text-left text-nowrap font-geistKanit text-white dark:text-white text-base md:text-2xl lg:text-5xl"
+              className="font-black text-center lg:text-left text-white dark:text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
               words="Hey, I  am  Divu"
             />
           </div>
+          {/* Profile Picture (Hidden on larger screens) */}
           <Image
             src={myImage}
             height={180}
             width={180}
-            className="rounded-lg md:hidden"
-            alt="pfp"
+            className="rounded-lg lg:hidden"
+            alt="Profile Picture"
           />
+          {/* Dock Icons */}
           <div className="relative">
             <Dock direction="middle" className="mt-0">
               <DockIcon>
@@ -61,26 +64,28 @@ export const Hero = () => {
               </DockIcon>
             </Dock>
           </div>
-          <div className="w-full items-center justify-center overflow-hidden">
-            <p className="lg:text-lg text-center md:text-left md:text-xs font-geistKanit">
-              I&apos;m a 21 year old software developer from&nbsp; 🇮🇳&nbsp; and
-              I love building full stack applications, lifting weights and I
-              live for caffiene .
+          {/* Description */}
+          <div className="w-full flex items-center justify-center overflow-hidden">
+            <p className="text-center lg:text-left text-sm sm:text-base lg:text-lg font-geistKanit">
+              I&apos;m a 21-year-old software developer from&nbsp; 🇮🇳&nbsp; who
+              loves building full-stack applications, lifting weights, and
+              living for caffeine.
             </p>
           </div>
         </div>
-        <div className="relative flex h-full w-fit-content p-2 flex-col items-center justify-center overflow-hidden bg-background rounded-lg">
+
+        {/* Right Section (Profile Picture) */}
+        <div className="relative flex w-4/12 h-full p-2 flex-col items-center justify-center overflow-hidden bg-background rounded-lg">
           <Image
             src={myImage}
-            height={180}
-            width={180}
+            // height={100}
+            // width={100}
             layout="responsive"
-            className="hidden md:flex rounded-lg"
-            alt="pfp"
+            className="hidden lg:flex rounded-lg"
+            alt="Profile Picture"
           />
         </div>
       </div>
-      {/* <BorderBeam size={1000} duration={12} delay={9} /> */}
     </div>
   );
 };
