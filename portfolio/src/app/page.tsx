@@ -6,6 +6,7 @@ import { WorkExp } from "./components/work-exp";
 import dynamic from "next/dynamic";
 import { useRef } from "react";
 import { TechStack } from "./components/tech-stack";
+import { About } from "./components/about";
 
 const BoxReveal = dynamic(() => import("@/components/ui/box-reveal"), {
   ssr: false,
@@ -16,6 +17,7 @@ export default function Home() {
   const workExpRef = useRef<HTMLDivElement>(null); // Change HTMLElement to HTMLDivElement
   const mainSectionRef = useRef<HTMLDivElement>(null); // Change HTMLElement to HTMLDivElement
   const techStackRef = useRef<HTMLDivElement>(null);
+  const aboutSectionRef = useRef<HTMLDivElement>(null);
   const scrollToSection = (
     ref: React.RefObject<HTMLDivElement>,
     offset: number = 0
@@ -43,6 +45,7 @@ export default function Home() {
           workExpRef={workExpRef}
           mainSectionRef={mainSectionRef}
           techStackRef={techStackRef}
+          aboutSectionRef={aboutSectionRef}
         />
       </div>
 
@@ -64,6 +67,9 @@ export default function Home() {
               </div>
               <div ref={mainSectionRef}>
                 <MainSection />
+              </div>
+              <div ref={aboutSectionRef}>
+                <About />
               </div>
             </>
           </BoxReveal>

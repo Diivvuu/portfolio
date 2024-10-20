@@ -3,12 +3,10 @@ import WordPullUp from "@/components/ui/word-pull-up";
 import { Icons } from "@/lib/icon-props";
 import Image from "next/image";
 import myImage from "@/assets/PFP.jpg";
-import { BorderBeam } from "@/components/ui/border-beam";
 
 export const Hero = () => {
   return (
-    // <div className="">
-    <div className="relative h-full overflow-hidden bg-background rounded-lg border-2 border-gray-950 py-4 w-10/12 flex flex-col items-center justify-center mx-auto">
+    <div className="relative h-full overflow-hidden bg-background rounded-lg border-2 border-gray-800 py-4 w-10/12 flex flex-col items-center justify-center mx-auto">
       <div className="px-8 w-full flex justify-between items-center pt-8">
         <div className="flex flex-col items-start justify-start p-4 gap-y-8 w-6/12">
           <div className="flex items-center">
@@ -52,7 +50,7 @@ export const Hero = () => {
           />
         </div>
       </div>
-      <BorderBeam size={1000} duration={12} delay={9} />
+      {/* <BorderBeam size={1000} duration={12} delay={9} /> */}
     </div>
   );
 };

@@ -26,6 +26,7 @@ interface LeftSidebarProps {
   workExpRef: React.RefObject<HTMLDivElement>; // Change HTMLElement to HTMLDivElement
   mainSectionRef: React.RefObject<HTMLDivElement>; // Change HTMLElement to HTMLDivElement
   techStackRef: React.RefObject<HTMLDivElement>; // Change HTMLElement to HTMLDivElement
+  aboutSectionRef: React.RefObject<HTMLDivElement>;
 }
 
 export const LeftSidebar = ({
@@ -34,6 +35,7 @@ export const LeftSidebar = ({
   workExpRef,
   mainSectionRef,
   techStackRef,
+  aboutSectionRef,
 }: LeftSidebarProps) => {
   /* eslint-disable-next-line no-unused-vars */
   const [_open, setOpen] = useState(false);
@@ -53,15 +55,17 @@ export const LeftSidebar = ({
   return (
     <div className="flex flex-col w-full h-full gap-y-8 pt-24 text-white justify-start items-end font-geistKanit">
       <button onClick={() => scrollToSection(heroRef, 0.3)}>Hello</button>
-      <button onClick={() => scrollToSection(workExpRef, 0.3)}>
+      <button onClick={() => scrollToSection(workExpRef, 0.2)}>
         Experience
       </button>
-      <button onClick={() => scrollToSection(techStackRef, 0.3)}>Tech</button>
+      <button onClick={() => scrollToSection(techStackRef, 0.2)}>Tech</button>
       <button onClick={() => scrollToSection(mainSectionRef, 0.1)}>
         Projects
       </button>
 
-      <div>About</div>
+      <button onClick={() => scrollToSection(aboutSectionRef, 0.2)}>
+        About
+      </button>
       <div>Contact</div>
       <Popover>
         <PopoverTrigger asChild>

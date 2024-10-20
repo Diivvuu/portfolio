@@ -7,9 +7,7 @@ import {
 import { useTheme } from "next-themes";
 import { CoolMode } from "@/components/ui/cool-mode";
 import { Button } from "@/components/ui/button";
-import { BorderBeam } from "@/components/ui/border-beam";
 
-// Define a type for the icon data
 interface IconData {
   simpleIcons: Record<string, SimpleIcon>;
 }
@@ -46,6 +44,8 @@ export const TechStack = () => {
       { slug: "tailwindcss", label: "Tailwind CSS" },
       { slug: "shadcnui", label: "Shadcn UI" },
       { slug: "mongodb", label: "MongoDB" },
+      { slug: "reactquery", label: "React Query" },
+      { slug: "axios", label: "Axios" },
       { slug: "redis", label: "Redis" },
       { slug: "appwrite", label: "Appwrite" },
       { slug: "express", label: "Express" },
@@ -95,7 +95,7 @@ export const TechStack = () => {
   }
 
   return (
-    <div className="relative flex gap-2 flex-wrap font-geistKanit w-10/12 px-8 mx-auto items-center justify-center overflow-hidden rounded-lg bg-background py-8 mt-12">
+    <div className="relative flex border-gray-800 border-2 gap-2 flex-wrap font-geistKanit w-10/12 px-8 mx-auto items-center justify-center overflow-hidden rounded-lg bg-background py-8 mt-12">
       <div className="flex w-full justify-center ">My Tech Toolbox</div>
       {renderedIcons?.map(({ icon, label }, index) => (
         <div
@@ -116,7 +116,7 @@ export const TechStack = () => {
           </CoolMode>
         </div>
       ))}
-      <BorderBeam size={1000} duration={12} delay={9} />
+      {/* <BorderBeam size={1000} duration={12} delay={9} /> */}
     </div>
   );
 };
