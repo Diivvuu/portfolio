@@ -5,7 +5,7 @@ export const Contact = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     const mailtoLink = `mailto:your_email@gmail.com?subject=Contact from ${name}&body=${encodeURIComponent(
       message
