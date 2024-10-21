@@ -12,7 +12,7 @@ export const Hero = () => {
         <div className="flex flex-col font-geistKanit items-center lg:items-start justify-center p-4 gap-y-8 w-full lg:w-7/12">
           <div className="flex items-center justify-center lg:justify-start w-full">
             <WordPullUp
-              className="font-black text-center lg:text-left text-white dark:text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+              className="font-black text-center lg:text-left text-white dark:text-white text-2xl sm:text-3xl text-nowrap md:text-4xl lg:text-5xl"
               words="Hey, I  am  Divu"
             />
           </div>
