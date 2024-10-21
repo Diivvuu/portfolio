@@ -23,7 +23,7 @@ export default function Home() {
   const aboutSectionRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = (
-    ref: React.RefObject<HTMLDivElement >,
+    ref: React.RefObject<HTMLDivElement>,
     offset: number = 0
   ) => {
     if (ref.current) {
@@ -70,7 +70,7 @@ export default function Home() {
       {/* Fixed left sidebar */}
       <div
         className={`md:w-3/12 w-full bg-black/90 fixed top-0 left-0 h-screen transition-transform transform ${
-          sidebarOpen ? "z-40 pr-20" : "-translate-x-full"
+          sidebarOpen ? "z-40 pr-20 md:pr-0" : "-translate-x-full"
         } md:translate-x-0 md:block`}
       >
         <LeftSidebar
