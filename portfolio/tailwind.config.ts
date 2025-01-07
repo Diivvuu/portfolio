@@ -21,10 +21,18 @@ const config: Config = {
       fontFamily: {
         geistSans: "var(--font-geist-sans)",
         geistMono: "var(--font-geist-mono)",
-        poppins: "var(--font-get-kanit)",
+        // poppins: "var(--font-get-kanit)",
         poppins: "var(--font-poppins)",
       },
       keyframes: {
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
         "infinite-scroll": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },

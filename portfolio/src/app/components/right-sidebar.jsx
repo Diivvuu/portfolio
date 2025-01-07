@@ -1,32 +1,32 @@
-import { useGithubActivity } from "@/hooks/use-get-events";
 import { Icons } from "@/lib/icon-props";
 import { cn } from "@/lib/utils";
-import { Check } from "lucide-react";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "@/components/ui/command";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { useState } from "react";
+// import { Check } from "lucide-react";
+// import {
+//   Command,
+//   CommandEmpty,
+//   CommandGroup,
+//   CommandInput,
+//   CommandItem,
+//   CommandList,
+// } from "@/components/ui/command";
+// import {
+//   Popover,
+//   PopoverContent,
+//   PopoverTrigger,
+// } from "@/components/ui/popover";
+// import { useState } from "react";
 import { AnimatedList } from "@/components/ui/animated-list";
+import { useGithubActivity } from "@/hooks/use-get-events";
 
-interface Item {
-  name?: string | undefined;
-  description?: string;
-  link?: string;
-  color?: string;
-  time?: string;
-}
+// interface Item {
+//   name?: string | undefined;
+//   description?: string;
+//   link?: string;
+//   color?: string;
+//   time?: string;
+// }
 
-const Notification = ({ name, description, link, color, time }: Item) => {
+const Notification = ({ name, description, link }) => {
   const repoLink = link?.replace("api.github.com/repos", "github.com");
   console.log(repoLink);
   return (
@@ -65,8 +65,8 @@ const Notification = ({ name, description, link, color, time }: Item) => {
 };
 
 export const RightSidebar = () => {
-  const [_open, setOpen] = useState(false);
-  const [value, setValue] = useState("");
+  // const [_open, setOpen] = useState(false);
+  // const [value, setValue] = useState("");
   const activities = useGithubActivity();
 
   // Ensure activities are defined before accessing
@@ -82,25 +82,26 @@ export const RightSidebar = () => {
   return (
     <div className="w-9/12 mt-20 border-2 font-poppins border-gray-800 rounded-xl px-2 py-2">
       <div className="py-2 text-white text-sm flex items-center gap-x-2 justify-start">
-        <Icons.gitHub className="size-6 text-white" />
+        {/* <Icons.gitHub className="size-[1rem] text-white" /> */}
         Recent Commits
       </div>
-      <AnimatedList className="pt-2">
-        {activities.activity.length > 0 ? (
-          activities.activity.slice(0, 5).map((activity) => (
-            // <div key={activity.id} className="text-white">
-            <Notification
-              name={activity.payload?.commits?.[0]?.message}
-              description={activity?.repo?.name}
-              link={activity?.repo?.url}
-            />
-
-            // </div>
-          ))
-        ) : (
-          <div>No recent activity found.</div>
-        )}
-      </AnimatedList>
+      {activities.activity && (
+        <AnimatedList className="pt-2">
+          {activities.activity.length > 0 ? (
+            activities.activity.slice(0, 5).map((activity) => (
+              <div key={activity.id} className="text-white">
+                <Notification
+                  name={activity.payload?.commits?.[0]?.message}
+                  description={activity?.repo?.name}
+                  link={activity?.repo?.url}
+                />
+              </div>
+            ))
+          ) : (
+            <div>No recent activity found.</div>
+          )}
+        </AnimatedList>
+      )}
     </div>
   );
 };

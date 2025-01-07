@@ -20,7 +20,7 @@ export const MainSection = () => {
         </TabsList>
         <TabsContent
           value="projects"
-          className="w-full mt-3 px-4 grid grid-cols-1 sm:grid-cols-2  gap-y-4 justify-items-center"
+          className="w-full mt-3 px-4 grid grid-cols-1 sm:grid-cols-2 gap-0 justify-items-center"
         >
           {Object.values(projects).map((project, index) => (
             <div key={index} className="flex justify-center w-full mt-2">

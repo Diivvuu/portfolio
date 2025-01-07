@@ -1,6 +1,5 @@
 import HyperText from "@/components/ui/hyper-text";
 
-
 interface LeftSidebarProps {
   scrollToSection: (
     ref: React.RefObject<HTMLDivElement>, // Change HTMLElement to HTMLDivElement
@@ -31,11 +30,11 @@ export const LeftSidebar = ({
       <button onClick={() => scrollToSection(workExpRef, 0.1)}>
         <HyperText text="Experience"></HyperText>
       </button>
-      <button onClick={() => scrollToSection(techStackRef, 0.2)}>
-        <HyperText text="Tech"></HyperText>
-      </button>
       <button onClick={() => scrollToSection(mainSectionRef, 0.1)}>
         <HyperText text="Projects"></HyperText>
+      </button>
+      <button onClick={() => scrollToSection(techStackRef, 0.2)}>
+        <HyperText text="Tech"></HyperText>
       </button>
       <button onClick={() => scrollToSection(aboutSectionRef, 0.2)}>
         <HyperText text="Contact"></HyperText>

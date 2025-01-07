@@ -6,7 +6,7 @@ import { Link } from "lucide-react";
 
 export const Education = () => {
   return (
-    <div className="relative w-10/12 mx-auto px-2  rounded-lg mt-12 font-poppins">
+    <div className="relative w-10/12 mx-auto px-2 rounded-lg my-6 font-poppins">
       <ol className="relative border-s border-gray-200 dark:border-gray-700">
         <li className="mb-10 ms-4">
           <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -25,7 +25,7 @@ export const Education = () => {
           </div>
           <ul className="text-sm text-white font-normal list-disc ml-8">
             <li>Graduated with major in Machine learning</li>
-            <li>Dean's List 2023</li>
+            <li>Dean&lsquo;s List 2023</li>
             <li>
               <div className="flex items-center justify-center bg-gray-700 border-2 border-gray-700 p-1 hover:border-white hover:bg-black transition-all ease duration-300 cursor-pointer rounded-lg w-fit text-xs text-gray-200">
                 <Link className="size-3 mr-2" />

@@ -7,8 +7,8 @@ import dynamic from "next/dynamic";
 import { useRef, useState, useEffect } from "react";
 import { TechStack } from "./components/tech-stack";
 import { Contact } from "./components/contact";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { RightSidebar } from "./components/right-sidebar";
-import { GiHamburgerMenu } from "react-icons/gi"; // Importing a hamburger icon
 
 const BoxReveal = dynamic(() => import("@/components/ui/box-reveal"), {
   ssr: false,
@@ -96,11 +96,11 @@ export default function Home() {
               <div ref={workExpRef}>
                 <WorkExp />
               </div>
-              <div ref={techStackRef}>
-                <TechStack />
-              </div>
               <div ref={mainSectionRef}>
                 <MainSection />
+              </div>
+              <div ref={techStackRef}>
+                <TechStack />
               </div>
               <div ref={aboutSectionRef}>
                 <Contact />
@@ -111,7 +111,7 @@ export default function Home() {
       </div>
 
       {/* Fixed right sidebar */}
-      <div className="md:w-3/12 w-0 fixed top-0 right-0">
+      <div className="md:w-3/12 w-0 fixed top-10 right-10">
         <RightSidebar />
       </div>
     </div>
