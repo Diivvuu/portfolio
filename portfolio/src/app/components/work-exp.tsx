@@ -4,7 +4,7 @@ import { Code } from "lucide-react";
 
 export const WorkExp = () => {
   return (
-    <div className="relative w-10/12 mx-auto px-4  border-2 border-gray-800 rounded-lg mt-12 font-geistKanit">
+    <div className="relative w-10/12 mx-auto px-4  border-2 border-gray-800 rounded-lg mt-12 font-poppins">
       <ol className="w-full relative border-s dark:border-gray-700">
         <li className="my-3 ms-4">
           <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -27,7 +27,7 @@ export const WorkExp = () => {
             </div>
           </div>
           <ul className="w-10/12 list-disc mb-4 ml-8 text-xs md:text-base font-normal text-gray-400 dark:text-gray-400">
-            <li>
+            {/* <li>
               Created and optimized the user portal landing page and admin
               portal of a marketplace using React.js,
             </li>
@@ -39,7 +39,7 @@ export const WorkExp = () => {
             <li>
               Utilized Redux for state management, reducing API call latency by
               30% and streamlining state updates.
-            </li>
+            </li> */}
           </ul>
         </li>
         <li className="mb-10 ms-4">
@@ -52,14 +52,14 @@ export const WorkExp = () => {
             <Code className="size-6 text-black bg-gray-200 p-1 rounded-full my-2" />
           </div>
           <ul className="w-10/12 list-disc mb-4 ml-8 text-xs md:text-base font-normal text-gray-400 dark:text-gray-400">
-            <li>
+            {/* <li>
               Got clients for full stack projects through LinkedIn and community
               groups.
             </li>
             <li>
               Made different tools using tech stacks like Next.js, React.js
               &amp; Firebase and designed the whole frontend too!
-            </li>
+            </li> */}
           </ul>
           {/* <Button
             className="bg-white ml-4 hover:scale-90 transition-all ease duration-300"

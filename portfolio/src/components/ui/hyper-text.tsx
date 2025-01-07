@@ -75,7 +75,7 @@ export default function HyperText({
           <motion.h1
             key={i}
             className={cn(
-              "font-geistKanit",
+              "font-poppins",
               letter === "" ? "w-3" : "",
               className
             )}

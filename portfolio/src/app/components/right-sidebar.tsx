@@ -42,7 +42,7 @@ const Notification = ({ name, description, link, color, time }: Item) => {
       )}
     >
       <a href={repoLink} target="_blank" rel="noopener noreferrer">
-        <div className="flex flex-row justify-start gap-2 items-center font-geistKanit">
+        <div className="flex flex-row justify-start gap-2 items-center font-poppins">
           <span className="">
             <Icons.gitHub className="text-white size-4" />
           </span>
@@ -80,7 +80,7 @@ export const RightSidebar = () => {
   }
 
   return (
-    <div className="w-9/12 mt-20 border-2 font-geistKanit border-gray-800 rounded-xl px-2 py-2">
+    <div className="w-9/12 mt-20 border-2 font-poppins border-gray-800 rounded-xl px-2 py-2">
       <div className="py-2 text-white text-sm flex items-center gap-x-2 justify-start">
         <Icons.gitHub className="size-6 text-white" />
         Recent Commits

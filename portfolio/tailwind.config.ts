@@ -21,7 +21,8 @@ const config: Config = {
       fontFamily: {
         geistSans: "var(--font-geist-sans)",
         geistMono: "var(--font-geist-mono)",
-        geistKanit: "var(--font-get-kanit)", // Corrected typo here
+        poppins: "var(--font-get-kanit)",
+        poppins: "var(--font-poppins)",
       },
       keyframes: {
         "infinite-scroll": {

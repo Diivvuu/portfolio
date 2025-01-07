@@ -14,7 +14,7 @@ export const Contact = () => {
   };
 
   return (
-    <div className="w-10/12 mx-auto mt-12 font-geistKanit  border-gray-800 border-2 p-8 rounded-lg pt-8">
+    <div className="w-10/12 mx-auto mt-12 font-poppins  border-gray-800 border-2 p-8 rounded-lg pt-8">
       <div className="text-left py-3 pb-8">Contact Me</div>
       <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
         <div className="py-2">

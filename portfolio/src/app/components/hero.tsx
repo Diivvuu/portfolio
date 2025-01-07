@@ -9,10 +9,10 @@ export const Hero = () => {
     <div className="relative h-full overflow-hidden bg-background rounded-lg border-2 border-gray-800 py-4 w-10/12 max-w-7xl mx-auto flex flex-col items-center justify-center">
       <div className="px-4 sm:px-8 w-full flex flex-col-reverse lg:flex-row justify-between items-center md:pt-8">
         {/* Left Section (Text and Icons) */}
-        <div className="flex flex-col font-geistKanit items-center lg:items-start justify-center p-4 gap-y-8 w-full lg:w-7/12">
+        <div className="flex flex-col items-center lg:items-start justify-center p-4 gap-y-8 w-full lg:w-7/12 font-poppins">
           <div className="flex items-center justify-center lg:justify-start w-full">
             <WordPullUp
-              className="font-black text-center lg:text-left text-white dark:text-white text-2xl sm:text-3xl text-nowrap md:text-4xl lg:text-5xl"
+              className="font-semibold text-center lg:text-left text-white dark:text-white text-2xl sm:text-3xl text-nowrap md:text-4xl lg:text-5xl"
               words="Hey, I  am  Divu"
             />
           </div>
@@ -66,10 +66,9 @@ export const Hero = () => {
           </div>
           {/* Description */}
           <div className="w-full flex items-center justify-center overflow-hidden">
-            <p className="text-center lg:text-left text-sm sm:text-base lg:text-lg font-geistKanit">
-              I&apos;m a 21-year-old software developer from&nbsp; 🇮🇳&nbsp; who
-              loves building full-stack applications, lifting weights, and
-              living for caffeine.
+            <p className="text-center lg:text-left text-sm sm:text-base xl:text-lg font-poppins font-normal">
+              21-year-old software developer from 🇮🇳 who builds full-stack apps,
+              lifts weights, and runs on caffeine.
             </p>
           </div>
         </div>

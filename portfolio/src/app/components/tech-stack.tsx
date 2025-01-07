@@ -94,7 +94,7 @@ export const TechStack = () => {
   }
 
   return (
-    <div className="relative flex border-gray-800 border-2 gap-2 flex-wrap font-geistKanit w-10/12 px-8 mx-auto items-center justify-center overflow-hidden rounded-lg bg-background py-8 mt-12">
+    <div className="relative flex border-gray-800 border-2 gap-2 flex-wrap font-poppins w-10/12 px-8 mx-auto items-center justify-center overflow-hidden rounded-lg bg-background py-8 mt-12">
       <div className="flex w-full justify-center ">My Tech Toolbox</div>
       {renderedIcons?.map(({ icon, label }, index) => (
         <div
