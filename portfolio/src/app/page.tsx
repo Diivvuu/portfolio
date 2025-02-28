@@ -17,6 +17,7 @@ const BoxReveal = dynamic(() => import("@/components/ui/box-reveal"), {
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false); // State for sidebar visibility
   const heroRef = useRef<HTMLDivElement>(null);
+  
   const workExpRef = useRef<HTMLDivElement>(null);
   const mainSectionRef = useRef<HTMLDivElement>(null);
   const techStackRef = useRef<HTMLDivElement>(null);
